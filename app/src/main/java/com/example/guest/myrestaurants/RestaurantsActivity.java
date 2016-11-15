@@ -42,8 +42,8 @@ public class RestaurantsActivity extends AppCompatActivity {
             }
         });
 
-        Intent intent = getIntent();
-        String location = intent.getStringExtra("location");
-        mLocationTextView.setText("Here are all the restaurants EVER: " + location);
+        Intent intent = getIntent(); //recreates the intent from previous view
+        String location = intent.getStringExtra("location"); //gets string value (location) from intent
+        mLocationTextView.setText("Here are all the restaurants EVER: " + location); //setText functions like .text in JS.
     }
 }

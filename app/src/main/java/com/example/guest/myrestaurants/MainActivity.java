@@ -30,9 +30,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                String location = mLocationEditText.getText().toString();
-                Intent intent = new Intent(MainActivity.this, RestaurantsActivity.class);
-                intent.putExtra("location", location);
+                String location = mLocationEditText.getText().toString(); //assign location value to String variable
+                Intent intent = new Intent(MainActivity.this, RestaurantsActivity.class); //transition to RestaurantActivity
+                intent.putExtra("location", location); //defines our key-value pair using putExtra method, carries data to new activity
                 startActivity(intent);
             }
         });
