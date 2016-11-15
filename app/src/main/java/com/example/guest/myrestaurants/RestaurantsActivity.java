@@ -32,6 +32,7 @@ public class RestaurantsActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, restaurants);
+        //http://stackoverflow.com/questions/3663745/what-is-android-r-layout-simple-list-item-1
         mListView.setAdapter(adapter);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -44,6 +45,6 @@ public class RestaurantsActivity extends AppCompatActivity {
 
         Intent intent = getIntent(); //recreates the intent from previous view
         String location = intent.getStringExtra("location"); //gets string value (location) from intent
-        mLocationTextView.setText("Here are all the restaurants EVER: " + location); //setText functions like .text in JS.
+        mLocationTextView.setText("Here are all the restaurants : " + location); //setText functions like .text in JS.
     }
 }
